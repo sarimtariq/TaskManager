@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>To Do List</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Update Task</h1>
+
+    <div class="form">
+        <form action="/update/{{item.id}}" method="POST">
+            <input type="text" name="content" id="content" value="{{item.task_detail}}">
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
